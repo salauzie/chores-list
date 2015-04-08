@@ -5,22 +5,32 @@ angular.module('app').controller("MainController", function(){
     vm.shows = [
 	    {
 	    	title: 'Take out trash',
+	    	day: 'Sunday',
+	    	name: 'Jenna',
 	    	favorite: true
 	    },
 	    {
 	    	title: 'Wash dishes',
+	    	day: 'as needed',
+	    	name: 'Lindsay',
 	    	favorite: false
 	    },
 	    {
 	    	title: 'Sweep',
+	    	day: 'Monday, Wednesday, Friday',
+	    	name: 'Steph',
 	    	favorite: true
 	    },
 	    {
 	    	title: 'Mop',
+	    	day: 'Monday',
+	    	name: 'Steph',
 	    	favorite: true
 	    },
 	    {
 	    	title: 'Wipe down counters',
+	    	day: 'After cooking',
+	    	name: 'All',
 	    	favorite: false
 	    }
     ];
