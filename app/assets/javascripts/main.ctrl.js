@@ -66,4 +66,8 @@ vm.addChore = function() {
     vm.chores.push(vm.new);
     vm.new = {};
 };
+vm.remove = function(chore) {
+	var index = vm.chores.indexOf(chore);
+	vm.chores.splice(index, 1);
+}
 });

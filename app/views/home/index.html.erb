@@ -20,7 +20,7 @@
 		<h3>Chores for the Week</h3>
 		<ul class="list-group">
         <ul class="list-group">
-        	<li class="list-group-item" ng-repeat="chore in main.chores | filter:main.searchInput"><span class="glyphicon glyphicon-ok" ng-if="chore.finished"></span> {{chore.title}} - {{chore.name}}<span class="badge">{{chore.day}}</span></li>
+        	<li class="list-group-item" ng-repeat="chore in main.chores | filter:main.searchInput"><span class="glyphicon glyphicon-ok" ng-if="chore.finished"></span> {{chore.title}} - {{chore.name}}<span class="badge">{{chore.day}}</span><a class="btn" ng-click="main.remove(chore)">Delete</a></li>
     </ul>
 <!--     <select class="form-control pull-right" ng-model="main.order" ng-options="order as order.title for order in main.orders"></select> -->
         <div class="clearfix"></div>
@@ -32,11 +32,11 @@
         </div>
         <div class="form-group">
             <label>Day</label>
-            <input type="text" class="form-control" ng-model="main.new.day">
+            <input type="text" class="form-control" ng-model="main.new.day" required >
         </div>
         <div class="form-group">
             <label>Name</label>
-            <input type="text" class="form-control" ng-model="main.new.name">
+            <input type="text" class="form-control" ng-model="main.new.name" required>
         </div>
         <!-- <div class="form-group">
             <label>Year</label>
