@@ -2,49 +2,49 @@ angular.module('app').controller("MainController", function(){
     var vm = this;
     vm.title = 'Chores';
     vm.searchInput = '';
-    vm.shows = [
+    vm.chores = [
 	    {
 	    	title: 'Take out trash',
 	    	day: 'Sunday',
 	    	name: 'Jenna',
-	    	favorite: true
+	    	finished: true
 	    },
 	    {
 	    	title: 'Wash dishes',
 	    	day: 'as needed',
 	    	name: 'Lindsay',
-	    	favorite: false
+	    	finished: false
 	    },
 	    {
 	    	title: 'Sweep',
 	    	day: 'Monday, Wednesday, Friday',
 	    	name: 'Steph',
-	    	favorite: true
+	    	finished: true
 	    },
 	    {
 	    	title: 'Mop',
 	    	day: 'Monday',
 	    	name: 'Steph',
-	    	favorite: true
+	    	finished: true
 	    },
 	    {
 	    	title: 'Wipe down counters',
 	    	day: 'After cooking',
 	    	name: 'All',
-	    	favorite: false
+	    	finished: false
 	    }
     ];
     // vm.orders = [
-//     {
-//         id: 1,
-//         title: 'Year Ascending',
-//         key: 'year',
-//         reverse: false
-//     },
+    // {
+    //     id: 1,
+    //     title: 'Day of the Week',
+    //     key: 'day',
+    //     reverse: false
+    // },
 //     {
 //         id: 2,
-//         title: 'Year Descending',
-//         key: 'year',
+//         title: 'Person',
+//         key: 'Name',
 //         reverse: true
 //     },
 //     {
@@ -62,8 +62,8 @@ angular.module('app').controller("MainController", function(){
 // ];
 // vm.order = vm.orders[0];
 vm.new = {};
-vm.addShow = function() {
-    vm.shows.push(vm.new);
+vm.addChore = function() {
+    vm.chores.push(vm.new);
     vm.new = {};
 };
 });

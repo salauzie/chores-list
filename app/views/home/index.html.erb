@@ -20,12 +20,12 @@
 		<h3>Chores for the Week</h3>
 		<ul class="list-group">
         <ul class="list-group">
-        	<li class="list-group-item" ng-repeat="show in main.shows | filter:main.searchInput"><span class="glyphicon glyphicon-ok" ng-if="show.favorite"></span> {{show.title}} - {{show.name}}<span class="badge">{{show.day}}</span></li>
+        	<li class="list-group-item" ng-repeat="chore in main.chores | filter:main.searchInput"><span class="glyphicon glyphicon-ok" ng-if="chore.finished"></span> {{chore.title}} - {{chore.name}}<span class="badge">{{chore.day}}</span></li>
     </ul>
-   <!--  <select class="form-control pull-right" ng-model="main.order" ng-options="order as order.title for order in main.orders"></select> -->
+<!--     <select class="form-control pull-right" ng-model="main.order" ng-options="order as order.title for order in main.orders"></select> -->
         <div class="clearfix"></div>
     <h3>Add another chore</h3>
-    <form name="main.addForm" class="form" ng-submit="main.addShow()">
+    <form name="main.addForm" class="form" ng-submit="main.addChore()">
         <div class="form-group">
             <label>Chore Name</label>
             <input type="text" class="form-control" ng-model="main.new.title" required />
@@ -44,7 +44,7 @@
         </div> -->
         <div class="row">
             <div class="col-xs-6">
-                <label>Finished: <input type="checkbox" ng-model="main.new.favorite" /></label>
+                <label>Finished: <input type="checkbox" ng-model="main.new.finished" /></label>
             </div>
             <div class="col-xs-6">
                 <button class="btn btn-success pull-right"><span class="glyphicon glyphicon-plus-sign"></span> Add</button>
